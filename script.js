@@ -32,7 +32,7 @@ document.getElementById("bmi-form").addEventListener("submit", (e) => {
             color = "#fb923c"; // Bright Orange
         } else {
             status = "Obese";
-            color = "#f87171"; // Bright Red
+            color = "#f87171";
         }
 
         bmiStatusText.innerText = status;
