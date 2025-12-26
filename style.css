@@ -19,6 +19,7 @@ body {
     color: #ffffff;
 }
 
+
 .glass-container {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
