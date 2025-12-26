@@ -1,74 +1,143 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  background-color: #3d3d3d;
-  color: aliceblue;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
 }
 
-body{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a; /* Fallback color */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                      url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
 }
 
-.container{
-  width: 450px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 5px solid rgb(185, 128, 15);
-  padding: 10px;
-  border-radius: 10px;
+.glass-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.input-box{
-  width: 50%;
-  height: 30px;
-  background-color: aliceblue;
-  border: none;
-  margin: 10px;
-  margin-bottom: 25px;
-  color: black;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 600;
-  border-radius: 10px;
-}
-
-button{
-  width: 100px;
-  height: 40px;
-  font-size: 16px;
-  border-radius: 10px;
-  background-color: antiquewhite;
-  color: black;
-  border: none;
-  font-weight: 600;
-}
-
-h1{
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
-
-h2{
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.det{
-  margin-top: 10px;
-  line-height: 1.5;
-  font-weight: 600;
-  color: rgb(255, 168, 61);
-  span{
+h1 {
+    font-size: 1.5rem;
     font-weight: 800;
-    font-size: 20px;
-    line-height: 2;
-  }
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #38bdf8;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #7dd3fc;
+    transform: translateY(-1px);
+}
+
+#results-section {
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#bmi-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    color: #38bdf8; /* Default color */
+}
+
+#bmi-status {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.ideal-weight {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+#weight-range {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+.reference-table {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ref-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.ref-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+    color: #94a3b8;
 }
